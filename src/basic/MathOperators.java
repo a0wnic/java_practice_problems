@@ -1,6 +1,9 @@
 package basic;
 
 public class MathOperators {
+  public static void Problem1(){
+
+  }
   public static void main(String[] args) throws Exception {
     // 1. Write a Java program to print the sum of two numbers.
     /*
@@ -9,7 +12,7 @@ public class MathOperators {
     Expected Output :
       110
     */
-
+      
     // 2. Write a Java program to divide two numbers and print on the screen.
     /*
     Test Data :
