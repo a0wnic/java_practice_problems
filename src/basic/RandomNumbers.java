@@ -20,12 +20,18 @@ public class RandomNumbers {
   public static void print(String text){
     System.out.println(text);
   }
+  public static void pausemenu(){
+    Scanner input = new Scanner(System.in);
+    print("Press any key to continue");
+    String a = input.nextLine();
+  }
   public static void Prob1(){
     Scanner input = new Scanner(System.in);
     print("A number will now be generated");
     double RandGen = Math.random();
     print("You got "+RandGen+"!");
     print("\n");
+    pausemenu();
     }
 
     public static void Prob2(){
@@ -38,6 +44,7 @@ public class RandomNumbers {
         print("You got "+RandGen+"!");
         }
         print("\n");
+        pausemenu();
       }
       public static void Prob3(){
         Scanner input = new Scanner(System.in);
@@ -54,6 +61,7 @@ public class RandomNumbers {
           print("You suck, "+name );
           }
         print("\n");
+        pausemenu();
         }
 
         public static void Prob4(){
@@ -76,24 +84,24 @@ public class RandomNumbers {
           print("You have chosen [Gun]");
           }
         print("\n");
+        pausemenu();
         }
         
         public static void Prob5(){
         
           Scanner input = new Scanner(System.in);
           Random Rand = new Random();
-          print("Greetings! \nWelcome to the seed value test");
           int seed = 69;
-          int min = 1;
-          int max = 3;
+          print("Greetings! \nWelcome to the seed value test");
+          pausemenu();
           Rand.setSeed(seed);
-          int range = (max - min) + 1;
            print("A number will now be generated");
           for(int i=0;i<=10;i++){ 
             int randgen = Rand.nextInt(3);
           print("You got "+randgen+"!");
           }
          print("\n");
+         pausemenu();
        }
 
           
@@ -125,7 +133,9 @@ public class RandomNumbers {
     if(aaa == 5){
       Prob5();
     }
-
+    if(aaa >=6){
+      print("That is not a problem\n");
+    }
     }
     // 2. Generate a random number between 1 and 3. print that number.
 
