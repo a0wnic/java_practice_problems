@@ -7,7 +7,7 @@ package basic;
 import java.lang.Math;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Timer;
+//import java.util.Timer;
 
 
 // hint
@@ -17,26 +17,103 @@ public class RandomNumbers {
   public static void testProblem() {
     //System.out.println("Do you believe in me?");
   }
-  
+  public static void print(String text){
+    System.out.println(text);
+  }
   public static void Prob1(){
     Scanner input = new Scanner(System.in);
-    System.out.println("A number will now be generated");
+    print("A number will now be generated");
     double RandGen = Math.random();
-    System.out.println("You got "+RandGen+"!");
+    print("You got "+RandGen+"!");
+    print("\n");
     }
 
     public static void Prob2(){
-      Scanner input = new Scanner(System.in);
-      System.out.println("A number will now be generated");
-      int RandGen = Math.random();
-      System.out.println("You got "+RandGen+"!");
+      int min = 1;
+      int max = 3;
+      int range = (max - min) + 1;
+        print("A number will now be generated");
+      for(int i=0;i<=10;i++){
+        int RandGen = (int)(Math.random()*range) + min;
+        print("You got "+RandGen+"!");
+        }
+        print("\n");
       }
-      
+      public static void Prob3(){
+        Scanner input = new Scanner(System.in);
+        int min = 1;
+        int max = 2;
+        int range = (max - min) + 1;
+        print("Greetings! \nWelcome to your Mental Health Assistant {MHA} \nWhat is your name?");
+        String name = input.nextLine();
+        int RandGen = (int)(Math.random()*range) + min;
+        if (RandGen==1) {
+          print(name + ", I believe in you!\nkeep it up!");
+          }
+        if (RandGen==2) {
+          print("You suck, "+name );
+          }
+        }
+
+        public static void Prob4(){
+        Scanner input = new Scanner(System.in);
+        print("Greetings! \nWelcome to rock, paper, scissors                                                                  (and gun) \nWhat would you like to use?");
+        print("Press 1 for rock\nPress 2 for paper\nPress 3 for scissors");
+        int type = input.nextInt();  
+
+        if (type==1) {
+          print("You have chosen [Rock]");
+          }
+        
+        if (type==2) {
+          print("You have chosen [Paper]");
+          }
+        if (type==3) {
+          print("You have chosen [Scissor]");
+          }
+        if (type==4) {
+          print("You have chosen [Gun]");
+          }
+        print("\n");
+        }
+        
+        public static void Prob5(){
+        
+          Scanner input = new Scanner(System.in);
+          print("Greetings! \nWelcome to rock, paper, scissors                                                                  (and gun) \nWhat would you like to use?");
+          print("Press 1 for rock\nPress 2 for paper\nPress 3 for scissors");
+          int type = input.nextInt();  
+          print("\n");
+          }
+          
+        
   public static void main(String[] args) throws Exception {
     //testProblem();
 
     // 1. Generate a random number and print to screen.
+      int x = 0;
+    while (x==0){
+      Scanner input = new Scanner(System.in);
+    System.out.println("Please choose a problem");
+    Double aaa = input.nextDouble();
+    System.out.println("You have choosen problem "+aaa+"\n");
+    if(aaa == 1){
       Prob1();
+    }
+    if(aaa == 2){
+      Prob2();
+    }
+    if(aaa == 3){
+      Prob3();
+    }
+    if(aaa == 4){
+      Prob4();
+    }
+      //if(aaa == 4){
+      //  Prob5();
+      //}
+
+    }
     // 2. Generate a random number between 1 and 3. print that number.
 
     // 3. Mental Health Therapist program:
