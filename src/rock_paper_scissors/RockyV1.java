@@ -9,7 +9,11 @@ public class RockyV1 {
         print("Press 1 for rock\nPress 2 for paper\nPress 3 for scissors\nPress 0 to exit");
             int x = 0;
             while (x <= 1) {    
-            int type = input.nextInt();  
+            int type = input.nextInt();
+            while(type >= 5) {
+                print("Try again");
+                type = input.nextInt();
+            }
             int enem = rand.nextInt(3)+1;
             if (type == 0){
                 break;
