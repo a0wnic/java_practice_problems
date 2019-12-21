@@ -53,6 +53,7 @@ public class RandomNumbers {
         if (RandGen==2) {
           print("You suck, "+name );
           }
+        print("\n");
         }
 
         public static void Prob4(){
@@ -95,8 +96,10 @@ public class RandomNumbers {
     while (x==0){
       Scanner input = new Scanner(System.in);
     System.out.println("Please choose a problem");
+    print("Press 1 for generating a random number\nPress 2 for generating a random number between 1 and 3\nPress 3 for the Mental Health Assistant\nPress 4 for a broken rock paper scissors");
     Double aaa = input.nextDouble();
-    System.out.println("You have choosen problem "+aaa+"\n");
+    print("\n");
+    //System.out.println("You have choosen problem "+aaa+"\n");
     if(aaa == 1){
       Prob1();
     }
