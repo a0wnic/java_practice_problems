@@ -81,11 +81,21 @@ public class RandomNumbers {
         public static void Prob5(){
         
           Scanner input = new Scanner(System.in);
-          print("Greetings! \nWelcome to rock, paper, scissors                                                                  (and gun) \nWhat would you like to use?");
-          print("Press 1 for rock\nPress 2 for paper\nPress 3 for scissors");
-          int type = input.nextInt();  
-          print("\n");
+          Random Rand = new Random();
+          print("Greetings! \nWelcome to the seed value test");
+          int seed = 69;
+          int min = 1;
+          int max = 3;
+          Rand.setSeed(seed);
+          int range = (max - min) + 1;
+           print("A number will now be generated");
+          for(int i=0;i<=10;i++){ 
+            int randgen = Rand.nextInt(3);
+          print("You got "+randgen+"!");
           }
+         print("\n");
+       }
+
           
         
   public static void main(String[] args) throws Exception {
@@ -96,7 +106,7 @@ public class RandomNumbers {
     while (x==0){
       Scanner input = new Scanner(System.in);
     System.out.println("Please choose a problem");
-    print("Press 1 for generating a random number\nPress 2 for generating a random number between 1 and 3\nPress 3 for the Mental Health Assistant\nPress 4 for a broken rock paper scissors");
+    print("Press 1 for generating a random number\nPress 2 for generating a random number between 1 and 3\nPress 3 for the Mental Health Assistant\nPress 4 for a broken rock paper scissors\nPress 5 for a seed value test");
     Double aaa = input.nextDouble();
     print("\n");
     //System.out.println("You have choosen problem "+aaa+"\n");
@@ -112,9 +122,9 @@ public class RandomNumbers {
     if(aaa == 4){
       Prob4();
     }
-      //if(aaa == 4){
-      //  Prob5();
-      //}
+    if(aaa == 5){
+      Prob5();
+    }
 
     }
     // 2. Generate a random number between 1 and 3. print that number.
