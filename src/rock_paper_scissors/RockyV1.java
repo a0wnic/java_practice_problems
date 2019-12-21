@@ -2,15 +2,13 @@ package rock_paper_scissors;
 import java.util.Random;
 import java.util.Scanner;
 public class RockyV1 {
-
     public static void main(String[] args) throws Exception{
         Scanner input = new Scanner(System.in);
         Random rand = new Random();
         print("Greetings! \nWelcome to rock, paper, scissors                                                                                                      (and gun) \nWhat would you like to use?");
         print("Press 1 for rock\nPress 2 for paper\nPress 3 for scissors\nPress 0 to exit");
             int x = 0;
-            while (x <= 1) {
-                
+            while (x <= 1) {    
             int type = input.nextInt();  
             int enem = rand.nextInt(3)+1;
             if (type == 0){
@@ -19,11 +17,8 @@ public class RockyV1 {
             printtype(type);
             enemprinttype(enem);
             calculate(type, enem);
-               
             }
         }
-
-
 public static void print(String text){
     System.out.println(text);  
 }
